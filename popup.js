@@ -18,7 +18,7 @@ document.getElementById("summarize").addEventListener("click", () => {
         resultDiv.textContent = "No active tab found.";
         return;
       }
-      console.log(tab);
+
       chrome.tabs.sendMessage(
         tab.id,
         { type: "GET_ARTICLE_TEXT" },
